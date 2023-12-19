@@ -8,14 +8,14 @@ Our target audience is any food enjoyer who wants to get some meals without the 
 
 ## Dev & User Manual
 ### Prereqs
-+ [Node.js](https://nodejs.org/en/download) - a JS runtime environment allowing for execution outside a web browser, needed for commands!
++ [Node.js](https://nodejs.org/en/download) - a JS runtime environment allowing for execution outside a web browser, needed for commands to run in terminal!
 # Installs and Configs
 ## For the Users....
 1. First off, either download the zip or clone the repository to a directory.
 2. Navigate (cd) into the directory
 3. Run ```node app.js```
 4. The server will then run on http://localhost:3000!
-5. Type in a type of dish you want to eat and it'll pop up with its ingredients and nutrient content in a nice and shiny Pi chart.
+5. Type in a type of dish you want to eat and it'll pop up with its ingredients and nutrient content in a nice and shiny Pi chart, as well as a button to navigate to the website where you can find instructions to make the recipe.
 ## For the Devs...
 #### _Supabase Connection_
 Currently, the project uses Supabase to store search entries from the server(meal types and cuisines.) It also uses an API key in the file that connects to a personal Supabase database to store those values.  \
