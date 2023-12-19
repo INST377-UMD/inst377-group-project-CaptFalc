@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just the Recipes, Please!</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!--Awesome & Solid JS Font-->
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>INST377 Final Project</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/doc">Docs</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+            </nav>
+            <h1>Just the Recipes, Please!</h1><br>
+            <div class="search-container">
+                <form id = "recipeForm">
+                  <input type="text" placeholder="Search.." name="search" id = "searchVal">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                  <div class = "resultDiv">
+                    <div class = "resultDiv-content" id = "resultsContainer">
+                    </div>
+                  </div>
+                </form>
+                <div id = "ingredientsUpto">
+                    <label for="num">Max Number of Ingredients: </label>
+                    <select id = "num">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select> 
+                </div>
+            </div><br>
+            <div class="line"></div>
+            <div class= "recipeDetails">
+                <div>
+                    <h2 id = "recipeName"></h2>
+                    <h4 id= "yield"><em></em></h4>
+                    <img id = "recipePic" style = "width: 400px; height: auto"><br><br>
+                    <div class = "recipeIngredient" id = ingredients></div>
+                </div>
+            <div id = "auxContainer" style = "width: 50%; float: left; text-align: center;">
+                <div id = "recipeInstructions">
+                    
+                </div>
+                <div class = "piChartContainer">
+                    <canvas id="nutrientPieChart" width="50%" height="350"></canvas>
+                </div>
+            </div>
+            </div>
+
+            </div>
+        </div>
+            <p></p>
+
+            <div class="line"></div>
+            <h2></h2>
+            <p></p>
+
+        </div>
+    </div>
+    <!--Bootstrap Code for Sidebar Navigation -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+    <script src = "/script.js"></script>
+</body>
+
+
+
+</html>
